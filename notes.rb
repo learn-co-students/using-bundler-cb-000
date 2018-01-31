@@ -21,4 +21,9 @@ Using the pessimistic operator in combination with consistent Semantic versionin
 
 Source: https://robots.thoughtbot.com/rubys-pessimistic-operator
 
+-----------------------------------------------
+
+How to install gems from git repositories
+http://bundler.io/v1.16/guides/git.html
+
 =end

@@ -8,6 +8,8 @@ gem "sinatra", '1.4.4'
 gem "hashie"
 # should list the octokit gem specifying version 2.0 with a twiddle-wakka
 gem "octokit", '~> 2.0'
+# should list the awesome_print gem specifying a remote git repository (use SSH)
+gem "awesome_print", :git => 'git@github.com:awesome-print/awesome_print.git'
 
 group :development do
   gem "pry"
