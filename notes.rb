@@ -26,4 +26,19 @@ Source: https://robots.thoughtbot.com/rubys-pessimistic-operator
 How to install gems from git repositories
 http://bundler.io/v1.16/guides/git.html
 
+-----------------------------------------------
+
+When you start up an app, your app needs to know the order in which to load files.
+If your app uses gems, a lot of your code will depend on these external libraries.
+This means we'd want the gems to be loaded in our app before our own code.
+If we loaded our code first, we'd get uninitialized constant errors or undefined variable or method errors. Load order matters.
+We can specify load information in config/environment.rb to configure our load path (or load order) so that nothing breaks.
+
+In config.environment.rb, load the default group (anything not explicitly in a group, like test in your Gemfile) and the development group
+
+Require 'bundler/setup' first. Without this, the app won't know to use bundler to install the gems in Gemfile.
+
+The two arguments that are passed into the .require method must be passed in the correct order
+
+
 =end
