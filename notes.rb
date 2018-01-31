@@ -40,5 +40,31 @@ Require 'bundler/setup' first. Without this, the app won't know to use bundler t
 
 The two arguments that are passed into the .require method must be passed in the correct order
 
+-----------------------------------------------
+
+`bin/run.rb` is where the app logic goes.
+By requiring config/environment file, we can access all of our gems from our run.rb file
+
+REQUIRE vs. REQUIRE_RELATIVE
+
+`require`
+- takes an absolute path for the filename, so the file must either be in the directory from which the application is being run or in one of the directories in your shell's PATH variable
+- examples:
+  require "my-library.rb"
+  require "db-driver"
+- https://apidock.com/ruby/Kernel/require
+
+
+`require_relative`
+- takes a relative path that is relative to the file in which the require statement is called (so it's relative to the file being run, not to the directory from which the code is being called)
+- examples:
+  require_relative '../config/environment'
+- https://apidock.com/ruby/Kernel/require_relative
+
+
+require "#{File.dirname(__FILE__)}/../lib/calendar"
+  VS
+require_relative "../lib/calendar"
+(source: https://practicingruby.com/articles/ways-to-load-code)
 
 =end
