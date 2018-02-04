@@ -1,4 +1,5 @@
 require 'bundler'
+require 'pry'
 
 describe "Bundler" do
   before :all do
@@ -29,6 +30,7 @@ describe "Bundler" do
 
     # http://bundler.io/v1.3/gemfile.html
     it "should list the sinatra gem with the specific version 1.4.4" do
+#      binding.pry
       expect(@gemfile_text =~ /gem ['"]sinatra['"], ?['"]v?1\.4\.4['"]/).not_to eq(nil)
     end
 
