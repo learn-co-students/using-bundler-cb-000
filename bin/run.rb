@@ -1,5 +1,6 @@
-Hashie
-Sinatra
-Octokit
-Pry
-AwesomePrint
+# Sinatra
+# Octokit
+# Pry
+# AwesomePrint
+# Rspec
+# Hashie
